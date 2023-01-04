@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/appli.css" type="text/css">
+    <title>Gestion d'une audiothèque</title>
+</head>
+<body>
+    <header>Gestion d'une audiothèque</header>
+    <div class="audiotheque">
+            <div class="liste_albums" id="liste_albums">
+                <div id="titre_liste">
+                    <p>Nombres d'albums répertoriés: </p> <!--Typescript donc bouton ?-->
+                </div>
+                <div class="informations_albums">
+                    <select id="liste_infos" size="15"></select>
+                </div>
+                <div class="btns_liste">
+                    <input type="button" id="btn_ajouter">
+                    <input type="button" id="btn_retirer"">
+                </div>
+            </div>
+            <div class="ajout_album" id="ajout_album">
+                <div class="div_type_auteur">
+                    <div>
+                        <input type="radio" name="Soliste" id="radio_soliste">Soliste
+                    </div>
+                    <div>
+                        <input type="radio" name="Groupe" id="radio_groupe">Groupe
+                    </div>
+                    <div>
+                        <input type="radio" name="Autre" id="radio_autre">Autre
+                    </div>
+                </div>
+                    <div>
+                        <label for="titre_album">Titre</label>
+                        <input type="text" name="titre" id="titre_album">
+                    </div>
+                    <div>
+                        <label for="interprete_album">Interprètre</label>
+                        <input type="text" name="interpretre" id="interprete_album">
+                    </div>
+                    <div>
+                        <label for="nbr_plages">Plages</label>
+                        <input type="number" name="plages" id="nbr_plages" min="1" max="100">
+                    </div>
+                    <div>
+                        <input type="checkbox" name="mini_album" id="btn_mini_album">Mini Album
+                    </div>
+                    <div class="btns_ajout">
+                        <input type="button" id="btn_valider">
+                        <input type="button" id="btn_annuler">
+                    </div>
+            </div>
+    </div>
+</body>
+</html>

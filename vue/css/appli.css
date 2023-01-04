@@ -1,0 +1,15 @@
+.audiotheque {
+    display: flex;
+    flex-direction: column;
+}
+
+.liste_albums {
+    display: flex;
+    flex-direction: column;
+}
+
+.btns_liste {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+}
