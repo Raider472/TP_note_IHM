@@ -25,21 +25,21 @@ header {
     gap: 1rem;
 }
 
-.bouton_ajouter {
+.bouton_bleu {
     background-color: #33CCFF;
     border: 3px solid blue;
 }
 
-.bouton_ajouter:hover {
+.bouton_bleu:hover {
     background-color: #1a7b9c;
 }
 
-.bouton_retirer {
+.bouton_rouge {
     background-color: #FF9900;
     border: 3px solid #666666;
 }
 
-.bouton_retirer:hover {
+.bouton_rouge:hover {
     background-color: #de8602;
 }
 
