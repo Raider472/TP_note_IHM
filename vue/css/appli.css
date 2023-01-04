@@ -9,7 +9,7 @@ header {
 .audiotheque {
     display: flex;
     flex-direction: column;
-    border-top: 3px solid black;
+    border-top: 3px solid gray;
 }
 
 .liste_albums {
