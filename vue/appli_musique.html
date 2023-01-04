@@ -10,16 +10,17 @@
 <body>
     <header>Gestion d'une audiothèque</header>
     <div class="audiotheque">
-            <div class="liste_albums" id="liste_albums">
-                <div id="titre_liste">
+            <div class="liste_albums" id="div_listeAlbums">
+                <div id="div_titreListe">
                     <p>Nombres d'albums répertoriés: </p> <!--Typescript donc bouton ?-->
                 </div>
                 <div class="informations_albums">
-                    <select id="liste_infos" size="15"></select>
-                </div>
-                <div class="btns_liste">
-                    <input type="button" id="btn_ajouter">
-                    <input type="button" id="btn_retirer"">
+                    <select id="select_listeInfos" size="15">    
+                    </select>
+                    <div class="btns_liste">
+                        <input type="button" class="bouton_ajouter" id="btn_ajouter" value="Ajouter">
+                        <input type="button" class="bouton_retirer" id="btn_retirer" value="Retirer">
+                    </div>
                 </div>
             </div>
             <div class="ajout_album" id="ajout_album">

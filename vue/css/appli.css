@@ -1,15 +1,65 @@
+header {
+    text-align: center;
+    font-size: 1.5rem;
+    border-top: 3px solid gray;
+    border-bottom: 3px solid black;
+    margin-bottom: 1rem;
+}
+
 .audiotheque {
     display: flex;
     flex-direction: column;
+    border-top: 3px solid black;
 }
 
 .liste_albums {
     display: flex;
     flex-direction: column;
+    background-color: #cccccc;
 }
 
 .btns_liste {
     display: flex;
     flex-direction: row;
     align-self: flex-end;
+    gap: 1rem;
+}
+
+.bouton_ajouter {
+    background-color: #33CCFF;
+    border: 3px solid blue;
+}
+
+.bouton_ajouter:hover {
+    background-color: #1a7b9c;
+}
+
+.bouton_retirer {
+    background-color: #FF9900;
+    border: 3px solid #666666;
+}
+
+.bouton_retirer:hover {
+    background-color: #de8602;
+}
+
+.informations_albums {
+    display: flex;
+    align-self: center;
+    width: 99%;
+    flex-direction: column;
+}
+
+#select_listeInfos {
+    width: 100%;
+}
+
+input[type=button] {
+    cursor: pointer;
+    vertical-align: middle;
+    width: 5rem;
+    height: 2rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+
 }
