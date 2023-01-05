@@ -1,60 +1,79 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/appli.css" type="text/css">
-    <title>Gestion d'une audiothèque</title>
-</head>
-<body>
-    <header>Gestion d'une audiothèque</header>
-    <div class="audiotheque">
-            <div class="liste_albums" id="div_listeAlbums">
-                <div id="div_titreListe">
-                    <p>Nombres d'albums répertoriés: </p> <!--Typescript donc bouton ?-->
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/appli.css" type="text/css">
+        <title>Gestion d'une audiothèque</title>
+    </head>
+    <body>
+        <header>
+            <h1>Gestion d'une audiothèque</h1>
+        </header>
+        <main>
+            <div class="audiotheque">
+                <div class="liste_albums" id="div_listeAlbums">
+                    <div id="div_titreListe">
+                        <p>Nombres d'albums répertoriés: </p> <!--Typescript donc bouton ?-->
+                    </div>
+                    <div class="informations_albums">
+                        <select id="select_listeInfos" size="15">    
+                        </select>
+                        <div class="btns_liste">
+                            <input type="button" class="bouton_bleu" id="btn_ajouter" value="Ajouter">
+                            <input type="button" class="bouton_rouge" id="btn_retirer" value="Retirer">
+                        </div>
+                    </div>
                 </div>
-                <div class="informations_albums">
-                    <select id="select_listeInfos" size="15">    
-                    </select>
-                    <div class="btns_liste">
-                        <input type="button" class="bouton_bleu" id="btn_ajouter" value="Ajouter">
-                        <input type="button" class="bouton_rouge" id="btn_retirer" value="Retirer">
+                <div class="ajout_album" id="ajout_album">
+                    <h2>Nouvel album</h2>
+                    <div class="ajout_album_boite">
+                        <div class="ajout_album_radio_texte">
+                            <div class="div_type_auteur">
+                                <div>
+                                    <input type="radio" name="type_auteur" id="radio_soliste" value="soliste">
+                                    <label for="radio_soliste">Soliste</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="type_auteur" id="radio_groupe" value="groupe">
+                                    <label for="radio_groupe">Groupe</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="type_auteur" id="radio_autre" value="autre">
+                                    <label for="radio_autre">Autre</label>
+                                </div>
+                            </div>
+                            <div class="informations_saisie">
+                                <div class="saisie_album">
+                                    <div class="titre_album_div">
+                                        <label for="edt_titreAlbum" class="label_div_titre">Titre</label>
+                                        <label for="edt_interpreteAlbum" class="label_div_titre">Interprètre</label>
+                                    </div>
+                                    <div class="interpretre_album_div">
+                                        <input type="text" name="titre" id="edt_titreAlbum" size="25" maxlength="20">
+                                        <input type="text" name="interpretre" id="edt_interpreteAlbum" size="25" maxlength="20">
+                                    </div>
+                                </div>
+                                <div class="saisie_nombre">
+                                    <div>
+                                        <label for="num_plages">Plages</label>
+                                        <input type="number" name="plages" id="num_plages" min="1" max="100">
+                                    </div>
+                                    <div class="checkbox_div">
+                                        <label for="chk_miniAlbum" class="checkbox_label">Mini Album</label>
+                                        <input type="checkbox" name="mini_album" id="chk_miniAlbum" class="checkbox_input">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btns_ajout">
+                            <input type="button" class="bouton_bleu" id="btn_valider" value="Valider">
+                            <input type="button" class="bouton_rouge" id="btn_annuler" value="Annuler">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="ajout_album" id="ajout_album">
-                <div class="div_type_auteur">
-                    <div>
-                        <input type="radio" name="Soliste" id="radio_soliste">Soliste
-                    </div>
-                    <div>
-                        <input type="radio" name="Groupe" id="radio_groupe">Groupe
-                    </div>
-                    <div>
-                        <input type="radio" name="Autre" id="radio_autre">Autre
-                    </div>
-                </div>
-                    <div>
-                        <label for="edt_titreAlbum">Titre</label>
-                        <input type="text" name="titre" id="edt_titreAlbum">
-                    </div>
-                    <div>
-                        <label for="edt_interpreteAlbum">Interprètre</label>
-                        <input type="text" name="interpretre" id="edt_interpreteAlbum">
-                    </div>
-                    <div>
-                        <label for="num_plages">Plages</label>
-                        <input type="number" name="plages" id="num_plages" min="1" max="100">
-                    </div>
-                    <div>
-                        <input type="checkbox" name="mini_album" id="chk_miniAlbum">Mini Album
-                    </div>
-                    <div class="btns_ajout">
-                        <input type="button" class="bouton_bleu" id="btn_valider" value="Valider">
-                        <input type="button" class="bouton_rouge" id="btn_annuler" value="Annuler">
-                    </div>
-            </div>
-    </div>
-</body>
+        </main>
+    </body>
 </html>

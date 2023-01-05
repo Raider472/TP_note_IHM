@@ -1,4 +1,4 @@
-header {
+header h1 {
     text-align: center;
     font-size: 1.5rem;
     border-top: 3px solid gray;
@@ -10,12 +10,12 @@ header {
     display: flex;
     flex-direction: column;
     border-top: 3px solid gray;
+    background-color: #cccccc;
 }
 
 .liste_albums {
     display: flex;
     flex-direction: column;
-    background-color: #cccccc;
 }
 
 .btns_liste {
@@ -28,6 +28,26 @@ header {
 .bouton_bleu {
     background-color: #33CCFF;
     border: 3px solid blue;
+}
+
+.saisie_nombre {
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.checkbox_div {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox_label{
+    order: 2;
+}
+
+.checkbox_input {
+    order: 1;
 }
 
 .bouton_bleu:hover {
@@ -50,6 +70,82 @@ header {
     flex-direction: column;
 }
 
+.ajout_album h2 {
+    font-size: 1.5rem;
+    border-top: 3px solid #666666;
+    border-bottom: 3px solid #666666;
+    text-align: center;
+    background-color: #AFAFAF;
+}
+
+.ajout_album_boite {
+    display: flex;
+    flex-direction: column;
+    width: 99%;
+}
+
+.ajout_album_radio_texte {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.div_type_auteur {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.informations_saisie {
+    display: flex;
+    flex-direction: column;
+    width: 74%;
+    align-items: flex-end;
+    gap: 1.5rem;
+}
+
+.saisie_album {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 79%;
+}
+
+.titre_album_div {
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.interpretre_album_div {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.input_div {
+    width: 100%;
+}
+
+.label_div_titre {
+    border: 3px solid gray;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: -50px;
+}
+
+.btns_ajout {
+    display: flex;
+    align-self: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
 #select_listeInfos {
     width: 100%;
 }
@@ -61,5 +157,10 @@ input[type=button] {
     height: 2rem;
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
+}
 
+input[type=text] {
+    width: 100%;
+    border: 3px solid #666666;
+    height: 1.5rem;
 }
