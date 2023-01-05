@@ -6,6 +6,10 @@ header h1 {
     margin-bottom: 1rem;
 }
 
+p {
+    margin-left: 1rem;
+}
+
 .audiotheque {
     display: flex;
     flex-direction: column;
@@ -31,10 +35,11 @@ header h1 {
 }
 
 .saisie_nombre {
-    justify-content: flex-end;
+    justify-content: center;
     display: flex;
     flex-direction: row;
     gap: 2rem;
+    width: 115rem;
 }
 
 .checkbox_div {
@@ -44,6 +49,7 @@ header h1 {
 
 .checkbox_label{
     order: 2;
+    color: gray;
 }
 
 .checkbox_input {
@@ -95,6 +101,7 @@ header h1 {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    margin-left: 2rem;
 }
 
 .informations_saisie {
@@ -136,7 +143,18 @@ header h1 {
     justify-content: flex-end;
     padding-right: 5px;
     padding-left: 5px;
-    padding-top: -50px;
+}
+
+.plages_div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 15%;
+    justify-content: flex-end;
+}
+
+.div_boite_plage {
+    width: 75%;
 }
 
 .btns_ajout {
@@ -160,7 +178,10 @@ input[type=button] {
 }
 
 input[type=text] {
-    width: 100%;
     border: 3px solid #666666;
     height: 1.5rem;
+}
+
+input[type=number] {
+    border: 3px solid #666666;
 }
