@@ -4,6 +4,8 @@ vueTpNoteClass.init({
     selectListeInfos: document.querySelector("[id=select_listeInfos]"),
     btnAjouter: document.querySelector("[id=btn_ajouter]"),
     btnRetirer: document.querySelector("[id=btn_retirer]"),
+    btnValider: document.querySelector("[id=btn_valider]"),
+    btnAnnuler: document.querySelector("[id=btn_annuler]"),
     radioType1: document.querySelector("[id=radio_soliste]"),
     radioType2: document.querySelector("[id=radio_groupe]"),
     radioType3: document.querySelector("[id=radio_autre]"),
@@ -16,3 +18,4 @@ vueTpNoteClass.init({
 })
 
 vueTpNoteClass.form.btnAjouter.addEventListener("click", function() {vueTpNoteClass.afficherAjout()})
+vueTpNoteClass.form.btnAnnuler.addEventListener("click", function() {vueTpNoteClass.anulerAjout()})
