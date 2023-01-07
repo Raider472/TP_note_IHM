@@ -21,6 +21,10 @@ p {
     background-color: #cccccc;
 }
 
+.div_titreListe {
+    display: flex;
+}
+
 .liste_albums {
     display: flex;
     flex-direction: column;
