@@ -25,6 +25,12 @@ p {
     display: flex;
 }
 
+#div_numéroAlbum {
+    display: flex;
+    align-items: center;
+    margin-left: 3px;
+}
+
 .liste_albums {
     display: flex;
     flex-direction: column;

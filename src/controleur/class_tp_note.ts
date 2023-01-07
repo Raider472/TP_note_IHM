@@ -14,7 +14,7 @@ type TpNoteForm = {
     , divPartieAffichage: HTMLElement
     , divPartieAjout: HTMLElement
     , divMiniAlbum: HTMLElement
-    , pNuméroPlages: HTMLElement
+    , divNuméroPlages: HTMLElement
 }
 
 class VueTpNote {
@@ -22,14 +22,31 @@ class VueTpNote {
     init(form : TpNoteForm) : void {
         this._form = form
         this.form.divPartieAjout.hidden = true
+        this.form.divNuméroPlages.innerHTML = "0"
     }
 
     get form() : TpNoteForm { return this._form }
 
+    augmenterNombrePlages(): void {
+        let stringNumber = this.form.divNuméroPlages.innerHTML
+        let nombre = parseInt(stringNumber, 10)
+        nombre ++
+        this.form.divNuméroPlages.innerHTML = String(nombre)
+    }
+
+    diminuerNombrePlages(): void {
+        let stringNumber = this.form.divNuméroPlages.innerHTML
+        let nombre = parseInt(stringNumber, 10)
+        nombre --
+        this.form.divNuméroPlages.innerHTML = String(nombre)
+    }
+
     afficherAjout(): void {
         this.form.divPartieAjout.hidden = false
-        this.form.divPartieAffichage.ariaDisabled 
         this.form.edtTitreAlbum.focus()
+        this.form.btnAjouter.disabled = true
+        this.form.btnRetirer.disabled = true
+        this.form.selectListeInfos.disabled = true
     }
 
     cacherChkPlages(): void {
@@ -52,6 +69,9 @@ class VueTpNote {
     anulerAjout(): void {
         this.form.divPartieAjout.hidden = true
         this.viderAjout()
+        this.form.btnAjouter.disabled = false
+        this.form.btnRetirer.disabled = false
+        this.form.selectListeInfos.disabled = false
     }
 
     viderAjout(): void {
@@ -124,11 +144,16 @@ class VueTpNote {
         let opt = new Option(texte, texte)
         this.form.selectListeInfos.add(opt)
         this.viderAjout()
+        this.augmenterNombrePlages()
         this.form.divPartieAjout.hidden = true
+        this.form.btnAjouter.disabled = false
+        this.form.btnRetirer.disabled = false
+        this.form.selectListeInfos.disabled = false
     }
 
     retirerSaisie(): void {
         if (this.form.selectListeInfos.selectedIndex >= 0) {
+            this.diminuerNombrePlages()
             this.form.selectListeInfos.remove(this.form.selectListeInfos.selectedIndex)
         }
         else {

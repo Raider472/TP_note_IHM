@@ -16,7 +16,7 @@ vueTpNoteClass.init({
     divPartieAffichage: document.querySelector("[id=div_listeAlbums]"),
     divPartieAjout: document.querySelector("[id=ajout_album]"),
     divMiniAlbum: document.querySelector("[id=div_miniAlbum]"),
-    pNuméroPlages: document.querySelector("[id=p_numéroAlbum]")
+    divNuméroPlages: document.querySelector("[id=div_numéroAlbum]")
 })
 
 vueTpNoteClass.form.btnAjouter.addEventListener("click", function() {vueTpNoteClass.afficherAjout()})
