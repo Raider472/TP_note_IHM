@@ -13,7 +13,6 @@ type TpNoteForm = {
     , chkMiniAlbum: HTMLInputElement
     , divPartieAffichage: HTMLElement
     , divPartieAjout: HTMLElement
-    , divMiniAlbum: HTMLElement
     , divNuméroPlages: HTMLElement
 }
 
@@ -49,20 +48,20 @@ class VueTpNote {
         this.form.selectListeInfos.disabled = true
     }
 
-    cacherChkPlages(): void {
+    desactiverPlages(): void {
         let valeurNumbString = this.form.numberPlage.value
         let valeurNumber = parseInt(valeurNumbString, 10)
         if (valeurNumber > 5) {
-            this.form.divMiniAlbum.hidden = true
+            this.form.chkMiniAlbum.disabled = true
             this.form.chkMiniAlbum.checked = false
         }
     }
 
-    afficherChkPlages(): void {
+    activerPlages(): void {
         let valeurNumbString = this.form.numberPlage.value
         let valeurNumber = parseInt(valeurNumbString, 10)
         if (valeurNumber <= 5) {
-            this.form.divMiniAlbum.hidden = false
+            this.form.chkMiniAlbum.disabled = false
         }
     }
 

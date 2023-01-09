@@ -15,7 +15,6 @@ vueTpNoteClass.init({
     chkMiniAlbum: document.querySelector("[id=chk_miniAlbum]"),
     divPartieAffichage: document.querySelector("[id=div_listeAlbums]"),
     divPartieAjout: document.querySelector("[id=ajout_album]"),
-    divMiniAlbum: document.querySelector("[id=div_miniAlbum]"),
     divNuméroPlages: document.querySelector("[id=div_numéroAlbum]")
 })
 
@@ -23,4 +22,4 @@ vueTpNoteClass.form.btnAjouter.addEventListener("click", function() {vueTpNoteCl
 vueTpNoteClass.form.btnRetirer.addEventListener("click", function() {vueTpNoteClass.retirerSaisie()})
 vueTpNoteClass.form.btnAnnuler.addEventListener("click", function() {vueTpNoteClass.anulerAjout()})
 vueTpNoteClass.form.btnValider.addEventListener("click", function() {vueTpNoteClass.verifieurSaisie()})
-vueTpNoteClass.form.numberPlage.addEventListener("change", function() {vueTpNoteClass.cacherChkPlages(), vueTpNoteClass.afficherChkPlages()})
+vueTpNoteClass.form.numberPlage.addEventListener("change", function() {vueTpNoteClass.desactiverPlages(), vueTpNoteClass.activerPlages()})
