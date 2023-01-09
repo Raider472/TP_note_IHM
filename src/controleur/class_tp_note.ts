@@ -109,13 +109,25 @@ class VueTpNote {
             this.form.numberPlage.focus()
             return this.messageErreur()
         }
-        if (confirm("Voulez-vous ajouter la saisi dans la liste ?") === true) { //TODO Changer avec son API ?
-            return this.ajouterSaisie()
-        }
+        return this.ajouterSaisie()
     }
 
     messageErreur(): void {
-        alert("Erreur - élément manquant \n Veuillez saisir les éléments requis pour toutes les cases nécessaires." ) //TODO Changer avec son API ?
+        let erreurString = "Erreur - élément manquant\n"
+        if (this.form.edtTitreAlbum.value === "") {
+            erreurString += "La zone de titre est vide\n"
+        }
+        if (this.form.edtTitreInterprete.value === "") {
+            erreurString += "La zone de l'intérprete est vide\n"
+        }
+        if (this.form.radioType1.checked === false && this.form.radioType2.checked === false && this.form.radioType3.checked === false) {
+            erreurString += "Veuillez choisir un type de groupe\n"
+        }
+        let nombre = parseInt(this.form.numberPlage.value, 10)
+        if (isNaN(nombre)) {
+            erreurString += "Veuillez completer ou choisir un entier valide pour le nombre de plages"
+        }
+        alert(erreurString) //TODO Changer avec son API ?
     }
 
     ajouterSaisie(): void {
@@ -152,8 +164,10 @@ class VueTpNote {
 
     retirerSaisie(): void {
         if (this.form.selectListeInfos.selectedIndex >= 0) {
-            this.diminuerNombrePlages()
-            this.form.selectListeInfos.remove(this.form.selectListeInfos.selectedIndex)
+            if (confirm("Voulez-vous retirer l'élément séléctionner de la liste ?") === true) { //TODO Changer avec son API ?
+                this.diminuerNombrePlages()
+                this.form.selectListeInfos.remove(this.form.selectListeInfos.selectedIndex)
+            }
         }
         else {
             alert("Erreur - élément invalide \n Veuillez sélectionner une plage sur la liste") //TODO Changer avec son API ?
