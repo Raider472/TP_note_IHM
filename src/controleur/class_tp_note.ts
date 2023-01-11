@@ -51,7 +51,7 @@ class VueTpNote {
     desactiverPlages(): void {
         let valeurNumbString = this.form.numberPlage.value
         let valeurNumber = parseInt(valeurNumbString, 10)
-        if (valeurNumber > 5) {
+        if (valeurNumber >= 5) {
             this.form.chkMiniAlbum.disabled = true
             this.form.chkMiniAlbum.checked = false
         }
@@ -60,7 +60,7 @@ class VueTpNote {
     activerPlages(): void {
         let valeurNumbString = this.form.numberPlage.value
         let valeurNumber = parseInt(valeurNumbString, 10)
-        if (valeurNumber <= 5) {
+        if (valeurNumber < 5) {
             this.form.chkMiniAlbum.disabled = false
         }
     }
